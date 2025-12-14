@@ -1,0 +1,71 @@
+/* Styles injected into WhatsApp Web */
+
+/* Floating button animation */
+#whatsapp-summarizer-floating {
+    animation: floatIn 0.5s ease-out;
+}
+
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Highlight effect for messages being processed */
+.message-highlight {
+    animation: highlightPulse 2s ease-in-out;
+}
+
+@keyframes highlightPulse {
+    0%, 100% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: rgba(59, 130, 246, 0.1);
+    }
+}
+
+/* Tooltip for summary button */
+#whatsapp-summarizer-floating::after {
+    content: "AI Summarizer - Click to summarize this chat";
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    margin-bottom: 10px;
+    z-index: 10000;
+}
+
+#whatsapp-summarizer-floating:hover::after {
+    opacity: 1;
+}
+
+/* Dark mode compatibility */
+@media (prefers-color-scheme: dark) {
+    #whatsapp-summarizer-floating {
+        background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
+    }
+}
+
+/* Mobile responsive tweaks */
+@media (max-width: 768px) {
+    #whatsapp-summarizer-floating {
+        bottom: 80px;
+        right: 10px;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Larger popup */
+body {
+  min-width: 520px !important;
+  min-height: 650px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Better scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Time range buttons - FIXED */
+.time-range-btn {
+  transition: all 0.2s ease;
+}
+
+.time-range-btn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  transform: scale(1.02);
+}
+
+/* Range slider styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 8px;
+  border-radius: 4px;
+  background: #374151;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #667eea;
+  cursor: pointer;
+  border: 3px solid #4f46e5;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Button animations */
+#summarize-btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#summarize-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(102, 126, 234, 0.4);
+}
+
+#summarize-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Summary content */
+#summary-content {
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+#summary-content h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+  color: #c7d2fe;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #4f46e5;
+}
+
+#summary-content h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  color: #93c5fd;
+}
+
+#summary-content ul {
+  padding-left: 1.8em;
+  margin: 0.8em 0;
+}
+
+#summary-content li {
+  margin: 0.4em 0;
+  padding-left: 0.5em;
+  position: relative;
+}
+
+#summary-content li:before {
+  content: "•";
+  color: #667eea;
+  font-weight: bold;
+  position: absolute;
+  left: -0.8em;
+}
+
+#summary-content p {
+  margin: 0.8em 0;
+}
+
+/* Loading animation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#loading-spinner div {
+  animation: spin 0.8s linear infinite;
+}
+
+/* Fade animations */
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Chat info badge */
+#message-count-badge {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+  font-weight: 600;
+  padding: 4px 10px;
+}
+
+/* API key input */
+#api-key-input:focus {
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}

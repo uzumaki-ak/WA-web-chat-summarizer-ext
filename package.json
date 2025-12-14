@@ -1,0 +1,36 @@
+{
+  "name": "whatsapp-web-summarizer",
+  "version": "1.0.0",
+  "description": "Browser extension to summarize WhatsApp Web chats using AI",
+  "main": "dist/popup.js",
+  "scripts": {
+    "build": "webpack --mode=production && node copy-files.js",
+    "dev": "webpack --mode=development --watch",
+    "copy": "node copy-files.js"
+  },
+  "keywords": [
+    "whatsapp",
+    "summarizer",
+    "ai",
+    "chrome-extension"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.0.258",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.10.0",
+    "@types/webpack": "^5.28.5",
+    "css-loader": "^6.8.1",
+    "fs-extra": "^11.3.2",
+    "style-loader": "^3.3.3",
+    "tailwindcss": "^3.3.5",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.1.3"
+  }
+}

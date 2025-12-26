@@ -1,6 +1,7 @@
 # WA-web-chat-summarizer-ext ![Build Status](https://img.shields.io/github/actions/workflow/status/uzumaki-ak/WA-web-chat-summarizer-ext/build.yml?branch=main) ![License](https://img.shields.io/github/license/uzumaki-ak/WA-web-chat-summarizer-ext) ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 
 ---
+#demo : https://youtu.be/co4GStCRRYw
 
 # Introduction
 
